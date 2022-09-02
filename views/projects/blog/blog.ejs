@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Space | Blog</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(43, 43, 43);
+        }
+        .blog .navbar {
+            background-color: rgb(31, 31, 31);
+            width: 100%;
+            height: 50px;
+            color: white;
+            font-size: 20px;
+        }
+        .blog .navbar .nav-baslik {
+            padding: 15px 25px;
+        }
+        .blog .navbar .nav-home {
+            position: absolute;
+            top: 15px;
+            left: 95%;
+            text-decoration: none;
+            color: white;
+        }
+        .blog .navbar .nav-home:hover , .blog .navbar .nav-baslik:hover {
+            font-size: 22px;
+            color: rgb(218, 218, 218);
+        }
+        .blog .document {
+            padding: 25px;
+        }
+        .blog .document .doc-baslik { 
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            left: 45%;
+            top: 150px;
+        }
+        .blog .document .doc-yazı {
+            font-size: 25px;
+            color: rgb(212, 212, 212);
+            width:60%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            right: 15px;
+            top: 250px;
+            
+        }
+        .blog .document .image img {
+            width: 450px;
+            height: 450px;
+            border-radius: 5px;
+        }
+        .blog .document .doc-etiket {
+            font-size-adjust: 22px;
+            color: rgb(136, 136, 136);
+            width:60%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left:39%;
+            top: 540px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blog">
+        <div class="navbar">
+            <p class="nav-baslik">Switch Space | Blog</p>
+            <a class="nav-home" href="/"><p>Home</p></a>
+        </div>
+        <div class="document">
+            <p class="doc-baslik"><%=blog.title%></p><br><br><br>
+            <div class="image">
+                <img class="doc-image" src="<%=blog.image%>" alt="">
+            </div>
+            <p class="doc-yazı"><%=blog.long%></p>
+            <p class="doc-etiket"><span style="color: rgb(230, 230, 230)">Etiketler :</span>  <%=blog.tag%></p>
+            
+        </div>
+    </div>
+</body>
+</html>
