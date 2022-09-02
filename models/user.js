@@ -15,19 +15,11 @@ const userSchema = new Schema({
         type : String, // string olduğunu belirtiyoruz
         require : true // require true diyerek oluşturulmasını zorunlu tutuyoruz
     },
-    email : {
-        type : String,
-        require : true
-    },
-    role : {
-        type : String
-    }
-    
 }, { timestamps : true })
 
 userSchema.plugin(passportLocalMongoose);
 
-const User = mongoose.model('User', userSchema) // Şemaya kullanırken ulaşacağımız isimi Blog olarak ayarlıyoruz
+const User = mongoose.model('User', userSchema) // Şemaya kullanırken ulaşacağımız isimi User olarak ayarlıyoruz
 passport.use(User.createStrategy());
 
 passport.serializeUser(User.serializeUser());
