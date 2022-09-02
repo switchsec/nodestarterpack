@@ -9,12 +9,6 @@ const blogSchema = new Schema({
     short : {
         type : String, // string olduğunu belirtiyoruz
     },
-    long : {
-        type : String,
-    },
-    tag : {
-        type : String,
-    },
     image :{
         type : String,
     }
