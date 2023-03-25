@@ -1,10 +1,5 @@
 const mongoose = require ('mongoose')
 const Schema = mongoose.Schema
-var passport = require("passport");
-
-var passportLocalMongoose = require('passport-local-mongoose');
-
-
 
 const userSchema = new Schema({
     name : {
@@ -20,8 +15,4 @@ const userSchema = new Schema({
 userSchema.plugin(passportLocalMongoose);
 
 const User = mongoose.model('User', userSchema) // Şemaya kullanırken ulaşacağımız isimi User olarak ayarlıyoruz
-passport.use(User.createStrategy());
-
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
 module.exports = User
