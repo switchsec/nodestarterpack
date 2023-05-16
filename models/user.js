@@ -1,4 +1,5 @@
-const mongoose = require ('mongoose')
+const mongoose = require ('mongoose') // Mongoose örnek şema örneği projenizde kullanmayacaksanız silebilirsiniz
+
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
