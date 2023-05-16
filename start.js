@@ -1,10 +1,6 @@
 var express = require("express")
 var app = express()
-const bcrypt = require("bcryptjs");
 const mongoose = require('mongoose')
-var passport = require("passport");
-var LocalStrategy = require("passport-local").Strategy;
-var passportLocalMongoose = require("passport-local-mongoose");
 
 const bodyParser = require('body-parser');
 const { rawListeners } = require('process');
